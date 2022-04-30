@@ -1,11 +1,57 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
+<link type="text/css" rel="stylesheet" href="static/styles.css" />
 {% block content %}
-    <form method="GET" action="{% url 'chart' %}">
-        {{ form.as_p }}
+<div class="container">
+    <div class="row">
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>Nyando Climate Visualisation</b></h1>
+        <h1 class="large-font" style="color:MediumSeaGreen"><b>Welcome</b></h1>
+        <p><span style="font-size:36px">Visualising Nyando Districs Historic Climate Data.</span></p>
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Amet massa vitae tortor condimentum lacinia quis vel eros donec. Magna sit amet purus gravida. 
+            Phasellus faucibus scelerisque eleifend donec. 
+            Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. 
+            Integer enim neque volutpat ac tincidunt vitae semper. 
+            Faucibus in ornare quam viverra orci sagittis eu volutpat. 
+            Nulla aliquet porttitor lacus luctus accumsan. 
+            Arcu non sodales neque sodales ut etiam. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. 
+            Facilisi cras fermentum odio eu.
+        </p>
+        <button class="btn">Take A Tour</button>
+      </div>
+      <div class="column-33">
+        <img src="static/images/home-img3.jpg" width="650" height="450">
+      </div>
+    </div>
+  </div>
+  
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row">
+      <div class="column-33">
+        <img src="static/images/home-img1.webp" width="450" height="450">
+      </div>
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>Climate Data</b></h1>
+        <h1 class="large-font" style="color:rgb(219, 76, 76);"><b>What does this show us?</b></h1>
+        <p><span style="font-size:24px">A revolution in resolution.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique magna sit amet purus gravida quis. Et pharetra pharetra massa massa ultricies mi quis. Posuere morbi leo urna molestie at elementum eu facilisis sed. In massa tempor nec feugiat nisl pretium fusce. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum.
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <button class="button" style="background-color:red">Read More</button>
+      </div>
+    </div>
+  </div>
 
-        <button class="submit_button">Submit</button>
-    </form>
-    
-    {{ chart|safe }}
+
+  
+  <h1 class="containerchart">Some Text</h1>
+  <form method="GET" action="{% url 'chart' %}">
+      {{ form.as_p }}
+
+      <button class="submit_button">Submit</button>
+  </form>
+  
+  {{ chart|safe }}
+  {{ chart2|safe }}
+
 {% endblock content %}
