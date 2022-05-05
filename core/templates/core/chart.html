@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 {% load static %}
-<link type="text/css" rel="stylesheet" href="static/styles.css" />
+<link type="css" rel="stylesheet" href="static/styles.css" />
 {% block content %}
 <div class="container">
     <div class="row">
       <div class="column-66">
-        <h1 class="xlarge-font"><b>Nyando Climate Visualisation</b></h1>
+        <h1 class="xlarge-font"><b>Kenya Climate Visualisation</b></h1>
         <h1 class="large-font" style="color:MediumSeaGreen"><b>Welcome</b></h1>
-        <p><span style="font-size:36px">Visualising Nyando Districs Historic Climate Data.</span></p>
+        <p><span style="font-size:36px">Visualising Kenya Historic Climate Data.</span></p>
         <p> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Amet massa vitae tortor condimentum lacinia quis vel eros donec. Magna sit amet purus gravida. 
@@ -19,7 +19,6 @@
             Arcu non sodales neque sodales ut etiam. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. 
             Facilisi cras fermentum odio eu.
         </p>
-        <button class="btn">Take A Tour</button>
       </div>
       <div class="column-33">
         <img src="static/images/home-img3.jpg" width="650" height="450">
@@ -37,15 +36,15 @@
         <h1 class="large-font" style="color:rgb(219, 76, 76);"><b>What does this show us?</b></h1>
         <p><span style="font-size:24px">A revolution in resolution.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique magna sit amet purus gravida quis. Et pharetra pharetra massa massa ultricies mi quis. Posuere morbi leo urna molestie at elementum eu facilisis sed. In massa tempor nec feugiat nisl pretium fusce. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum.
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button class="button" style="background-color:red">Read More</button>
+        
       </div>
     </div>
   </div>
 
 
   
-  <h1 class="containerchart">Some Text</h1>
-  <form method="GET" action="{% url 'chart' %}">
+  <h1 class="containerchart">Charts</h1>
+  <form class="id_form" method="GET" action="{% url 'chart' %}">
       {{ form.as_p }}
 
       <button class="submit_button">Submit</button>
@@ -53,5 +52,46 @@
   
   {{ chart|safe }}
   {{ chart2|safe }}
+
+  <div class = "about-wrapper">
+    <div class = "about-left">
+      <div class = "about-left-content">
+        <div>
+          <div class = "shadow">
+            <div class = "about-img">
+              <img src = "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png" alt = "about image">
+            </div>
+          </div>
+
+          <h2>Ashish Matta</h2>
+          <h3>Computer Science Student</h3>
+        </div>
+
+        <ul class = "icons">
+          <li><i class = "fab fa-facebook-f"></i></li>
+          <li><i class = "fab fa-twitter"></i></li>
+          <li><i class = "fab fa-linkedin"></i></li>
+          <li><i class = "fab fa-instagram"></i></li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class = "about-right">
+      <h1>Hello<span>!</span></h1>
+      <h2>Here's who I am & what I do</h2>
+      <div class = "about-btns">
+        <button type = "button" class = "btn btn-pink">resume / CV</button>
+        <button type = "button" class = "btn btn-white">Git hub</button>
+      </div>
+
+      <div class = "about-para">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, aspernatur possimus ullam quaerat, laboriosam ex voluptate aliquid laborum, obcaecati ratione accusamus! Ea nisi modi dolor nam numquam? Temporibus, molestias amet.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure tempora alias laudantium sapiente impedit!</p>
+      </div>
+      <div class="credit">Made with <span style="color:tomato">❤</span> by <a href="https://www.learningrobo.com/">Ashish Matta</a></div>
+    </div>
+  </div>
+
 
 {% endblock content %}
